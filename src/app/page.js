@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const API_URL = `${process.env.API_URL}`;
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}`;
 
 async function fetchData() {
   const res = await fetch(API_URL, { next: { revalidate: 10 } });
