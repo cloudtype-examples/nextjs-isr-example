@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const API_URL = 'https://port-0-express-crud-example-1lx88fkf8.sel5.cloudtype.app/api/users';
+const API_URL = `${process.env.API_URL}`;
 
 async function fetchData() {
   const res = await fetch(API_URL, { next: { revalidate: 10 } });
