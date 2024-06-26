@@ -1,4 +1,4 @@
-const API_URL = "https://port-0-express-crud-example-1lx88fkf8.sel5.cloudtype.app/api/users";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
